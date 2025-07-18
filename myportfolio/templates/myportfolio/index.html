@@ -1,0 +1,16 @@
+{% extends 'myportfolio/base.html' %}
+{%load static%}
+{% block content %}
+<div class="container mt-5">
+    <div class="row align-items-center">
+        <div class="col-md-6" data-aos="fade-right">
+            <h1 class="display-4 fw-bold">Hi,I am Achyut Prakash Saha Roy</h1>
+            <p class="lead">Welcome to my Portfolio Website</p>
+            <a href="{% url 'projects' %}" class="btn btn-primary btn-lg mt-3">View Projects</a>
+        </div>
+        <div class="col-md-6 text-center" data-aos="fade-left">
+            <img src="{% static 'myportfolio/images/new.jpg' %}" class="img-fluid" alt="new" style="max-height:600px;max-width:650px;">
+        </div>
+    </div>
+</div>
+{% endblock %}

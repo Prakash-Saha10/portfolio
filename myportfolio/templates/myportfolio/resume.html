@@ -1,0 +1,51 @@
+{% extends 'myportfolio/base.html' %}
+{%load static%}
+{% block content %}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+    .timeline-step {
+        padding: 20px;
+        border-left: 4px solid #0d6efd;
+        margin-left: 20px;
+        position: relative;
+    }
+    .timeline-step::before {
+        content: '';
+        position: absolute;
+        left: -10px;
+        top: 25px;
+        width: 20px;
+        height: 20px;
+        background-color: #0d6efd;
+        border-radius: 50%;
+    }
+    .resume-section {
+        padding: 60px 0;
+        font-family: 'Poppins', sans-serif;
+    }
+</style>
+
+<div class="container resume-section">
+    <h2 class="mb-5 text-center" data-aos="fade-down">My Academic Journey</h2>
+
+    <div class="timeline-step" data-aos="fade-up">
+        <h4>Bachelor's in Computer Science and Engineering</h4>
+        <p>University of Asia Pacific, Bangladesh<br><small>2016 – 2020</small></p>
+    </div>
+
+    <div class="timeline-step" data-aos="fade-up" data-aos-delay="200">
+        <h4>HSC (Science)</h4>
+        <p>Barisal Govt. College<br><small>2015</small></p>
+    </div>
+
+    <div class="timeline-step" data-aos="fade-up" data-aos-delay="400">
+        <h4>SSC (Science)</h4>
+        <p>Jhalakathi Govt. High School<br><small>2013</small></p>
+    </div>
+
+    <!-- Hidden workspace for future use -->
+    {% comment %} <div style="display: none;" id="workspace-location">
+        Dhaka, Bangladesh (Currently Hidden)
+    </div> {% endcomment %}
+</div>
+{% endblock %}
